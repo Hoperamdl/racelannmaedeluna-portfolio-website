@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racel Ann Mae De Luna - Data Analyst Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .skill-bar {
+            height: 6px;
+            border-radius: 3px;
+            transition: width 0.8s ease-in-out;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 2rem 0;
+        }
+        .company-logo {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        .cert-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .workspace-card {
+            transition: all 0.3s ease;
+        }
+        .workspace-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .spec-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid #667eea;
+        }
+        .genspark-watermark {
+            font-size: 10px;
+            color: #9ca3af;
+            text-align: center;
+            padding: 8px;
+            border-top: 1px solid #4b5563;
+            margin-top: 16px;
+        }
+        @media print {
+            body { 
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .no-print { display: none; }
+            .project-card:hover, .workspace-card:hover {
+                transform: none;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .genspark-watermark { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Racel Ann Mae T. De Luna</h1>
+            <p class="text-xl mb-6">Data Analyst & Business Intelligence Specialist</p>
+            <div class="flex flex-wrap justify-center gap-6 text-lg">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    <span>dracelannmae@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    <span>+63 939 902 1200</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/racel-ann-mae-de-luna-a718a32b4/" target="_blank" class="text-white hover:text-gray-200">LinkedIn Profile</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-8">
+        <!-- Professional Summary -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Professional Summary</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-lg leading-relaxed">
+                    Detail-oriented and analytical Data Analyst with hands-on experience in collecting, cleaning and interpreting data to support business decisions. Proficient in Microsoft Excel, SQL, and data visualization tools like Power BI. Skilled at transforming raw data into meaningful insights that help drive performance and strategy. Experienced in web development, e-commerce management, and multi-platform customer support. Committed to accuracy, efficiency, and continuous learning.
+                </p>
+            </div>
+        </section>
+
+        <!-- Workspace & Technical Setup -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Workspace & Technical Setup</h2>
+            
+            <!-- System Specifications -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h3 class="text-2xl font-bold mb-6 text-blue-600">
+                    <i class="fas fa-desktop mr-3"></i>Primary Workstation Specifications
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-microchip text-blue-600"></i>
+                            <h4 class="font-bold">Processor</h4>
+                        </div>
+                        <p class="text-gray-700">AMD Ryzen 7 5700U</p>
+                        <p class="text-sm text-gray-600">1.80 GHz with Radeon Graphics</p>
+                    </div>
+                    
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-memory text-green-600"></i>
+                            <h4 class="font-bold">Memory (RAM)</h4>
+                        </div>
+                        <p class="text-gray-700">8.00 GB</p>
+                        <p class="text-sm text-gray-600">3200 MHz Speed</p>
+                    </div>
+                    
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-hdd text-purple-600"></i>
+                            <h4 class="font-bold">Storage</h4>
+                        </div>
+                        <p class="text-gray-700">477 GB</p>
+                        <p class="text-sm text-gray-600">SSD Configuration</p>
+                    </div>
+                    
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-tv text-red-600"></i>
+                            <h4 class="font-bold">Graphics</h4>
+                        </div>
+                        <p class="text-gray-700">AMD Radeon Graphics</p>
+                        <p class="text-sm text-gray-600">4 GB VRAM</p>
+                    </div>
+                    
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fab fa-windows text-blue-500"></i>
+                            <h4 class="font-bold">Operating System</h4>
+                        </div>
+                        <p class="text-gray-700">Windows 11</p>
+                        <p class="text-sm text-gray-600">Home Single Language</p>
+                    </div>
+                    
+                    <div class="spec-item p-4 rounded-lg">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-cogs text-orange-600"></i>
+                            <h4 class="font-bold">Configuration</h4>
+                        </div>
+                        <p class="text-gray-700">Multiple GPUs</p>
+                        <p class="text-sm text-gray-600">Optimized for Data Processing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workspace Equipment -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Professional Setup -->
+                <div class="workspace-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-purple-600">
+                        <i class="fas fa-laptop-code mr-2"></i>Professional Setup
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-desktop text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Multi-Monitor Configuration</h4>
+                                <p class="text-gray-600 text-sm">Dual external monitors + laptop display for enhanced productivity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-laptop text-green-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Multiple Laptop Setup</h4>
+                                <p class="text-gray-600 text-sm">Primary workstation + secondary laptop for testing and backup</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-keyboard text-purple-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Ergonomic Peripherals</h4>
+                                <p class="text-gray-600 text-sm">Full-size mechanical keyboard and precision mouse for extended work sessions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-tablet-alt text-orange-600 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Additional Devices</h4>
+                                <p class="text-gray-600 text-sm">Tablet and mobile devices for testing cross-platform compatibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Equipment -->
+                <div class="workspace-card bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-pink-600">
+                        <i class="fas fa-headphones mr-2"></i>Audio Equipment
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-lg border-l-4 border-pink-500">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fas fa-headphones-alt text-pink-600"></i>
+                                <h4 class="font-bold text-pink-800">Logitech Zone Vibe 100</h4>
+                            </div>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-palette text-pink-500"></i>
+                                    <span class="text-gray-700"><strong>Color:</strong> Pink Edition</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-microphone text-pink-500"></i>
+                                    <span class="text-gray-700"><strong>Features:</strong> Noise-cancelling microphone</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-bluetooth-b text-pink-500"></i>
+                                    <span class="text-gray-700"><strong>Connectivity:</strong> Wireless & USB-A receiver</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-clock text-pink-500"></i>
+                                    <span class="text-gray-700"><strong>Battery:</strong> 18+ hours talk time</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-video text-pink-500"></i>
+                                    <span class="text-gray-700"><strong>Use Case:</strong> Video calls, meetings & music</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <p class="text-sm text-gray-600">
+                                <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                Perfect for long data analysis sessions and virtual meetings with crystal-clear audio quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workspace Environment -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+                <h3 class="text-xl font-bold mb-4 text-indigo-600">
+                    <i class="fas fa-home mr-2"></i>Workspace Environment
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Optimized Lighting</h4>
+                        <p class="text-gray-600 text-sm">Natural and ambient lighting setup for reduced eye strain during extended analysis work</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-wifi text-green-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">High-Speed Internet</h4>
+                        <p class="text-gray-600 text-sm">Reliable internet connection for cloud-based analytics and seamless remote collaboration</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-chair text-purple-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Ergonomic Design</h4>
+                        <p class="text-gray-600 text-sm">Comfortable workspace setup designed for productivity and long working hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- MyGems.biz Project -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="gradient-bg p-4 text-white">
+                        <h3 class="text-xl font-bold mb-2">MyGems.biz E-commerce Platform</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">Wix Studio</span>
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">E-commerce</span>
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-3 text-sm">
+                            Professional e-commerce website featuring jewelry and gems, built with Wix Studio. Demonstrates web development skills, business management, and digital marketing implementation.
+                        </p>
+                        <div class="mb-3">
+                            <h4 class="font-semibold mb-2 text-sm">Key Features:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm">
+                                <li>Responsive e-commerce design</li>
+                                <li>Product catalog management</li>
+                                <li>Customer engagement optimization</li>
+                                <li>Custom domain implementation</li>
+                            </ul>
+                        </div>
+                        <a href="https://mygems.biz" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Visit Website</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Excel Dashboard Project -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-green-600 p-4 text-white">
+                        <h3 class="text-xl font-bold mb-2">Advanced Excel Analytics Dashboards</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">Excel Advanced</span>
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">Data Visualization</span>
+                            <span class="bg-white bg-opacity-20 px-2 py-1 rounded-full text-xs">Business Intelligence</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 mb-3 text-sm">
+                            Collection of five comprehensive analytics dashboards showcasing advanced Excel techniques, data modeling, and visualization expertise across multiple industries.
+                        </p>
+                        <div class="mb-3">
+                            <h4 class="font-semibold mb-2 text-sm">Dashboard Portfolio:</h4>
+                            <div class="space-y-1 text-xs">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-chart-bar text-blue-500"></i>
+                                    <span>Global Superstore Sales Performance</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-heartbeat text-red-500"></i>
+                                    <span>Healthcare Data Performance</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-users text-purple-500"></i>
+                                    <span>HR Analytics - Enrollee Profile Insights</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-play text-red-600"></i>
+                                    <span>Netflix Content Overview</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-shopping-cart text-green-500"></i>
+                                    <span>Sales Data Performance Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1kf6i1zQd58vSsJk--3zeVRk8_sqQaef7?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-green-600 hover:text-green-800 text-sm">
+                            <i class="fas fa-folder-open"></i>
+                            <span>View All Dashboards</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Data Analysis & Visualization -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">
+                        <i class="fas fa-chart-line mr-2"></i>Data Analysis & Visualization
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Microsoft Excel</span>
+                                <span class="text-blue-600 font-semibold">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full">
+                                <div class="skill-bar bg-blue-600" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Power BI</span>
+                                <span class="text-blue-600 font-semibold">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full">
+                                <div class="skill-bar bg-blue-600" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>SQL</span>
+                                <span class="text-blue-600 font-semibold">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full">
+                                <div class="skill-bar bg-blue-600" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Python</span>
+                                <span class="text-blue-600 font-semibold">80%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full">
+                                <div class="skill-bar bg-blue-600" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">
+                        <i class="fas fa-terminal "></i>Programming Languages
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-css3-alt text-blue-500"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-python text-blue-600"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-code text-gray-700"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-database text-yellow-600"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft & Office Suite -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-orange-600">
+                        <i class="fab fa-microsoft mr-2"></i>Microsoft Ecosystem
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-microsoft text-blue-500"></i>
+                            <span>Microsoft 365 Suite</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-file-word text-blue-600"></i>
+                            <span>Word</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-file-powerpoint text-orange-600"></i>
+                            <span>PowerPoint</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-users text-purple-600"></i>
+                            <span>Teams</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-cloud text-blue-400"></i>
+                            <span>OneDrive</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-bullhorn text-blue-500"></i>
+                            <span>Microsoft Advertising Platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Workspace & Web Development -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4 text-green-600">
+                        <i class="fab fa-google mr-2"></i>Google Workspace & Web Dev
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-file-alt text-blue-500"></i>
+                            <span>Google Docs</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-table text-green-600"></i>
+                            <span>Google Sheets</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-chalkboard text-yellow-600"></i>
+                            <span>Google Slides</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-google-drive text-blue-400"></i>
+                            <span>Google Drive</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-code text-purple-600"></i>
+                            <span>Wix Studio</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-shopping-cart text-green-500"></i>
+                            <span>E-commerce Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Professional Experience</h2>
+            
+            <!-- Current Role -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-600">Data Analyst</h3>
+                        <p class="text-lg font-semibold">Square & Level Construction Inc. – Philippines</p>
+                    </div>
+                    <div class="text-gray-600 md:text-right">
+                        <p class="font-semibold">October 2023 – June 2025</p>
+                        <p class="text-sm">Remote</p>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Promoted from Administrative Specialist for taking initiative in reporting and analytics</li>
+                    <li>Develop dashboards and reports using Microsoft Excel, Power BI and SQL to support budgeting, scheduling and resource planning</li>
+                    <li>Track costs, analyze performance and streamline workflows through automation</li>
+                    <li>Collaborate with project teams to deliver timely, data-driven insights that reduce delays and optimize operations</li>
+                </ul>
+            </div>
+
+            <!-- Administrative Specialist -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-600">Administrative Specialist</h3>
+                        <p class="text-lg font-semibold">Square & Level Construction Inc. – Philippines</p>
+                    </div>
+                    <div class="text-gray-600 md:text-right">
+                        <p class="font-semibold">June 2022 – October 2023</p>
+                        <p class="text-sm">Hybrid</p>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Supported project managers and engineers by managing documentation, coordinating logistics and maintaining accurate records</li>
+                    <li>Created Microsoft Excel reports for expenses tracking, inventory and project updates</li>
+                    <li>Acted as a communication bridge between teams and vendors</li>
+                </ul>
+            </div>
+
+            <!-- Real Time Analyst -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.16Nd-OpnE_8Iv53a_IfFmwHaFJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Majorel Corporation" class="company-logo">
+                        <div>
+                            <h3 class="text-2xl font-bold text-purple-600">Real Time Analyst</h3>
+                            <p class="text-lg font-semibold">Majorel Corporation – Philippines</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 md:text-right">
+                        <p class="font-semibold">January 2022 – June 2022</p>
+                        <p class="text-sm">Onsite</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 mb-3">
+                    <div class="flex items-center gap-2 bg-blue-50 px-3 py-2 rounded-lg">
+                        <i class="fas fa-bullhorn text-blue-600"></i>
+                        <span class="font-semibold text-blue-700">Microsoft Advertising Account</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-orange-50 px-3 py-2 rounded-lg">
+                        <i class="fas fa-car text-orange-600"></i>
+                        <span class="font-semibold text-orange-700">DiDi Global Account</span>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Monitored live operations for Microsoft Advertising and DiDi accounts to ensure optimal staffing and service level adherence</li>
+                    <li>Tracked real-time agent activity, handled scheduling exceptions and provided alerts on KPI risks</li>
+                    <li>Collaborated with workforce teams and prepared daily performance reports to support decision-making</li>
+                    <li>Strengthened ability to interpret real-time data and respond quickly to operational needs</li>
+                </ul>
+            </div>
+
+            <!-- Customer Service Representative -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.16Nd-OpnE_8Iv53a_IfFmwHaFJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Majorel Corporation" class="company-logo">
+                        <div>
+                            <h3 class="text-2xl font-bold text-orange-600">Customer Service Representative</h3>
+                            <p class="text-lg font-semibold">Majorel Corporation – Philippines</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 md:text-right">
+                        <p class="font-semibold">August 2019 – January 2022</p>
+                        <p class="text-sm">Onsite</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 mb-3 bg-blue-50 px-3 py-2 rounded-lg inline-flex">
+                    <i class="fas fa-bullhorn text-blue-600"></i>
+                    <span class="font-semibold text-blue-700">Microsoft Advertising Account Specialist</span>
+                </div>
+                
+                <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Outbound Calls</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Email</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Chat</span>
+                </div>
+
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Provided multi-channel support (calls, chat, email) for Microsoft Advertising clients, resolving account and campaign issues efficiently</li>
+                    <li>Assisted with account management, billing inquiries and campaign optimization</li>
+                    <li>Communicated clearly and empathetically to ensure high customer satisfaction and loyalty</li>
+                    <li>Resolved technical and account problems promptly, consistently meeting SLA targets</li>
+                    <li>Accurately documented cases and escalated complex issues when necessary</li>
+                    <li>Consistently exceeded KPIs in quality, responsiveness and customer experience</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-600">Bachelor of Science in Information Technology</h3>
+                        <p class="text-lg font-semibold">Pamantasan ng Lungsod ng Marikina – Philippines</p>
+                    </div>
+                    <div class="text-gray-600 md:text-right">
+                        <p class="font-semibold">July 2015 – April 2019</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h4 class="font-bold text-gray-800 mb-2">Thesis/Capstone Project:</h4>
+                    <p class="text-gray-700 mb-2"><strong>Title:</strong> Automated Payroll and Attendance Monitoring System</p>
+                    <p class="text-gray-700 mb-3"><strong>Role:</strong> Project Developer, Project Manager and Research Analyst</p>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h5 class="font-semibold text-gray-800 mb-2">Technologies Used:</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">VBA.NET</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Microsoft Excel</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Biometrics Scanner Integration</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Automated Report Generation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Training -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Additional Training</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-600">Full Stack Data Analytics</h3>
+                        <p class="text-lg font-semibold">ExcelHelpline – Philippines</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h4 class="font-bold text-gray-800 mb-2">Coverage:</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Microsoft Excel Advanced</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Power BI</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">SQL</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8 text-center">Certifications</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fas fa-certificate text-yellow-500 text-2xl"></i>
+                        <h3 class="text-xl font-bold">Certified Project Manager</h3>
+                    </div>
+                    <p class="text-gray-700 mb-2"><strong>Issuing Organization:</strong> Philippine Project Managers Association</p>
+                    <p class="text-gray-600 mb-3"><strong>Date:</strong> December 2024</p>
+                    <a href="https://philpma.org/tutor-certificate?cert_hash=510b878c0ef219d3" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Verify Certificate</span>
+                    </a>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fas fa-hard-hat text-orange-500 text-2xl"></i>
+                        <h3 class="text-xl font-bold">Construction Occupational Safety and Health Training II</h3>
+                    </div>
+                    <p class="text-gray-700 mb-2"><strong>Issuing Organization:</strong> Thinksafe Training Consultancy And Services Corp.</p>
+                    <p class="text-gray-600 mb-3"><strong>Date:</strong> April 2025</p>
+                    <a href="https://drive.google.com/file/d/17ojyQYNUmL3RAAU0GzJ94GHp7SdGLRgR/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-800 text-sm">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>View Certificate</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mb-8">
+            <div class="gradient-bg rounded-lg p-8 text-white">
+                <h2 class="text-3xl font-bold mb-4">Let's Transform Data Into Insights Together</h2>
+                <p class="text-xl mb-6">Ready to leverage data-driven solutions for your business success</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:dracelannmae@gmail.com" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Send Email
+                    </a>
+                    <a href="tel:+639399021200" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 Racel Ann Mae T. De Luna. All rights reserved.</p>
+        <p class="text-gray-400 mt-2">Data Analyst | Business Intelligence Specialist | Web Developer</p>
+    </footer>
+
+    <script>
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0%';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', animateSkillBars);
+    </script>
+</body>
+</html>
